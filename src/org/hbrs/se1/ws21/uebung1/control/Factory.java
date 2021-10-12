@@ -4,4 +4,7 @@ public class Factory {
     /*
     * In dem Tutorial erstellt
     */
+    public Translator createTranslator() {
+        return new GermanTranslator();
+    }
 }
