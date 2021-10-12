@@ -1,6 +1,11 @@
 package org.hbrs.se1.ws21.uebung1.view;
 
+import org.hbrs.se1.ws21.uebung1.control.Translator;
+import org.hbrs.se1.ws21.uebung1.control.TranslatorFactory;
+
 public class Client {
+
+	private com.sun.java.accessibility.util.Translator translator;
 
 	/*
 	 * Methode zur Ausgabe einer Zahl auf der Console
@@ -12,9 +17,16 @@ public class Client {
 		//
 		// Strenge Implementierung gegen das Interface Translator gewuenscht!
 
+		Translator translator = TranslatorFactory.createGermanTranslator();
+
 		System.out.println("Das Ergebnis der Berechnung: " +
 				"[das Ergebnis an dieser Stelle]"  );
 
+	}
+
+
+	public void setTranslator(com.sun.java.accessibility.util.Translator translator) {
+		this.translator = translator;
 	}
 }
 
